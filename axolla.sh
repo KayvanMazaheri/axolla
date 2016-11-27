@@ -1,6 +1,6 @@
 # set -x
 DELAY=10
-LOGFILE=log.txt
+LOGFILE=$(mktemp -t "axolla.XXXXXXXXXX")
 AXEL_PARAMS=$@
 DIFF_PARAMS="-q"
 
