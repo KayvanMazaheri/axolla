@@ -6,13 +6,13 @@ DIFF_PARAMS="-q"
 
 while :
 do
-	axel $AXEL_PARAMS >> $LOGFILE &
+	axel $AXEL_PARAMS > $LOGFILE &
 	PID=$!
 	while :
 	do
-		cp -T -f $LOGFILE $LOGFILE.OLD
+		> $LOGFILE
 		sleep $DELAY
-		if [[ $(diff $DIFF_PARAMS $LOGFILE $LOGFILE.OLD | wc -l)  = 0 ]]; then
+		if [[ $(cat $LOGFILE | wc -c)  = 0 ]]; then
 			break
 		fi
 	done
