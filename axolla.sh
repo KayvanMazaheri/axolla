@@ -4,11 +4,11 @@ LOGFILE=log.txt
 AXEL_PARAMS=$@
 DIFF_PARAMS="-q"
 
-for (( ; ; ))
+while :
 do
 	axel $AXEL_PARAMS >> $LOGFILE &
 	PID=$!
-	for (( ; ; ))
+	while :
 	do
 		cp -T -f $LOGFILE $LOGFILE.OLD
 		sleep $DELAY
