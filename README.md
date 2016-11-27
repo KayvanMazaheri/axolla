@@ -8,7 +8,7 @@ My experience with [axel](https://github.com/eribertomota/axel) was a disaster, 
 ### Usage
 
 ```bash
-axolla [OPTIONS] url1 [url2] [url...]
+./axolla.sh [OPTIONS] url1 [url2] [url...]
 ```
 
 ### Why ?
